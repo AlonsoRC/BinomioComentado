@@ -17,7 +17,14 @@ import javax.swing.*;
  *
  * @author Alumno
  */
+
+/*
+  Se extiende la clase JFrame y se implementa la interfaz ActionListener
+*/
 public class Bino extends JFrame implements ActionListener{
+    /*
+    Se declara las variables globales
+    */
     private JLabel Titulazo, comx, comy;
     private JTextField  X, Y, R; 
     private JButton obtener;       
@@ -26,12 +33,17 @@ public class Bino extends JFrame implements ActionListener{
     private JLabel com2;
     private JLabel igual;
     
+    /*
+    Instanciamos el constructor
+    */
     public Bino() {
         super();                    
         Ventana();        
         inicializarComponentes();        
     }
-    
+    /*
+    Se dibuja la ventana de la aplicación
+    */
     private void Ventana() {
         this.setTitle("Binomio");                   
         this.setSize(500, 400);                         
@@ -40,7 +52,9 @@ public class Bino extends JFrame implements ActionListener{
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
     }
-    
+    /*
+    Inicializamos los componentes
+    */
     private void inicializarComponentes(){
         Titulazo = new JLabel();
         comx = new JLabel();
@@ -69,6 +83,11 @@ public class Bino extends JFrame implements ActionListener{
         X.setBounds(70, 110, 80, 60);
         X.setFont(new Font("Arial", Font.BOLD, 70));
         X.setHorizontalAlignment(JTextField.CENTER);
+        
+        /*
+        Metodo para validar el número de caracteres introducidos y validar que solo se inserten números
+        */
+        
         X.addKeyListener(new KeyAdapter(){
                @Override
                public void keyTyped(KeyEvent e)
@@ -142,6 +161,9 @@ public class Bino extends JFrame implements ActionListener{
         R.setBorder(null);
         add(R);
     }
+    /*
+    Se ejecuta el metodo del boton que resuelve el binomio al cuadrado
+    */
     
     @Override
     public void actionPerformed(ActionEvent e) {

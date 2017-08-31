@@ -15,6 +15,7 @@ public class Binomio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Bino b=new Bino();
         b.setVisible(true);
     }
